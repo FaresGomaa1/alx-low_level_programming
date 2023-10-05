@@ -1,4 +1,2 @@
 #!/bin/bash
-# A script that preprocesses a C file and saves the result into another file.
-
 gcc -E "$CFILE" -o c
