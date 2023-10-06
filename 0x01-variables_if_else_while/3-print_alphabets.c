@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Prints the alphabet in lowercase and then in uppercase.
  *
  * Description: The program starts by printing lowercase alphabets
  * using a loop and then prints uppercase alphabets using another loop.
- *
  * Return: Always 0 (Success)
  */
 int main(void)
