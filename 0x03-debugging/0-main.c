@@ -1,38 +1,15 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
-void positive_or_negative(int n);
+#include "main.h"
 
 /**
- * main - Tests function positive_or_negative with a value of 0.
- *
- * Return: Always 0 (Success)
+ * main - tests function that prints if integer is positive or negative
+ * Return: 0
  */
 int main(void)
 {
-    int n = 0;
-    positive_or_negative(n);
-    return (0);
-}
+	int i;
 
-void positive_or_negative(int n)
-{
-    printf("%d ", n); /* Print the number followed by a space */
+	i = 0;
+	positive_or_negative(i);
 
-    if (n == 0)
-    {
-        printf("is zero\n");
-    }
-    else
-    {
-        if (n < 0)
-        {
-            printf("is negative\n");
-        }
-        else
-        {
-            printf("is positive\n");
-        }
-    }
+	return (0);
 }
