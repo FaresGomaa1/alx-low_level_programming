@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point for the FizzBuzz problem
+ *
+ * Return: 0 (success)
+ */
 int main(void)
 {
 	int i;
@@ -12,72 +13,28 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-			print_fizzbuzz();
+		{
+			printf("FizzBuzz");
+		}
 		else if (i % 3 == 0)
-			print_fizz();
+		{
+			printf("Fizz");
+		}
 		else if (i % 5 == 0)
-			print_buzz();
+		{
+			printf("Buzz");
+		}
 		else
-			print_number(i);
+		{
+			printf("%d", i);
+		}
 
-		if (i != 100)
-			_putchar(' ');
-		else
-			_putchar('\n');
+		if (i < 100)
+		{
+			printf(" ");
+		}
 	}
+	printf("\n");
 
 	return (0);
-}
-
-/**
-* print_fizz - Print Fizz to the stdout
-*
-* Return: void
-*/
-void print_fizz(void)
-{
-	_putchar('F');
-	_putchar('i');
-	_putchar('z');
-	_putchar('z');
-}
-
-/**
-* print_buzz - Print Buzz to the stdout
-*
-* Return: void
-*/
-void print_buzz(void)
-{
-	_putchar('B');
-	_putchar('u');
-	_putchar('z');
-	_putchar('z');
-}
-
-/**
-* print_fizzbuzz - Print FizzBuzz to the stdout
-*
-* Return: void
-*/
-void print_fizzbuzz(void)
-{
-	print_fizz();
-	print_buzz();
-}
-
-/**
-* print_number - Prints an integer.
-* @n: The integer.
-*/
-void print_number(int n)
-{
-	if (n == 0)
-		_putchar('0');
-	else
-	{
-		if (n / 10)
-			print_number(n / 10);
-		_putchar((n % 10) + '0');
-	}
 }
