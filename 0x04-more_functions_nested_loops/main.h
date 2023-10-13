@@ -12,7 +12,11 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
-void _print_str(char str[]);
-void _print_num(int n);
+/* ... Other function prototypes ... */
+
+void print_fizz(void);
+void print_buzz(void);
+void print_fizzbuzz(void);
+void print_number(int n);
 
 #endif /* MAIN_H */
