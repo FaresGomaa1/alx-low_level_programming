@@ -19,7 +19,7 @@ int main(void) {
     srand(time(0));
 
     while (1) {
-        len = (rand() % 10) + 1; // Generate random length between 1 to 10
+        len = (rand() % 10) + 1;
 
         for (i = 0; i < len; i++) {
             password[i] = (rand() % 94) + 33;
