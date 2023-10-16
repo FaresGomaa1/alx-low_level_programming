@@ -1,26 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
-/**
- * main - Entry point
- * 
- * Return: 0 on success.
- */
-int main(void)
-{
-    int i;
+long checksum(char *str) {
+    long sum = 0;
+    while (*str) {
+        sum += (unsigned char)(*str);
+        str++;
+    }
+    return sum;
+}
+
+int main(void) {
     char password[100];
+    int i, len;
 
     srand(time(0));
 
-    for (i = 0; i < 10; i++)
-    {
-        password[i] = (rand() % 94) + 33;
+    while (1) {
+        len = (rand() % 10) + 1; // Generate random length between 1 to 10
+
+        for (i = 0; i < len; i++) {
+            password[i] = (rand() % 94) + 33;
+        }
+        password[i] = '\0';
+
+        if (checksum(password) == 0xad4) {
+            printf("%s\n", password);
+            break;
+        }
     }
-    password[i] = '\0';
-
-    printf("%s\n", password);
-
-    return (0);
+    return 0;
 }
