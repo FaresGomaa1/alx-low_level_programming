@@ -12,12 +12,11 @@ int main(void)
     int i;
     char password[100];
 
-    srand(time(0)); // seed the random number generator
+    srand(time(0));
 
-    /* Generate random characters to form the password */
-    for (i = 0; i < 10; i++) // Here, 10 characters long. You can adjust accordingly
+    for (i = 0; i < 10; i++)
     {
-        password[i] = (rand() % 94) + 33; // This generates random printable characters
+        password[i] = (rand() % 94) + 33;
     }
     password[i] = '\0';
 
