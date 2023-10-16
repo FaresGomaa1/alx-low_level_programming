@@ -2,28 +2,26 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
-
 /**
  * main - Entry point
- *
- * Return: Always 0 (Success)
+ * 
+ * Return: 0 on success.
  */
 int main(void)
 {
-	int i;
-	char password[PASSWORD_LENGTH + 1];
-	const char characters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    int i;
+    char password[100];
 
-	srand(time(NULL));
+    srand(time(0)); // seed the random number generator
 
-	for (i = 0; i < PASSWORD_LENGTH; i++)
-	{
-		password[i] = characters[rand() % (sizeof(characters) - 1)];
-	}
-	password[PASSWORD_LENGTH] = '\0';
+    /* Generate random characters to form the password */
+    for (i = 0; i < 10; i++) // Here, 10 characters long. You can adjust accordingly
+    {
+        password[i] = (rand() % 94) + 33; // This generates random printable characters
+    }
+    password[i] = '\0';
 
-	printf("%s\n", password);
+    printf("%s\n", password);
 
-	return (0);
+    return (0);
 }
