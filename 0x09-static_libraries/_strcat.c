@@ -1,5 +1,7 @@
 #include "main.h"
-char *_strcat(char *dest, char *src)
-{
-	return (0);
+
+char *_strcat(char *dest, char *src) {
+    (void)dest;
+    (void)src;
+    return dest;
 }

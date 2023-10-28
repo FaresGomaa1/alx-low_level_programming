@@ -1,4 +1,5 @@
 #include "main.h"
+
 int _abs(int n) {
-    return (0);
+    return n < 0 ? -n : n;
 }

@@ -1,5 +1,7 @@
 #include "main.h"
-char *_strcpy(char *dest, char *src)
-{
-	return (0);
+
+char *_strcpy(char *dest, char *src) {
+    (void)dest;
+    (void)src;
+    return dest;
 }
