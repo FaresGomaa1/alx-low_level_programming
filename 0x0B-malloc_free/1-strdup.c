@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strdup - duplicates a string.
  * @str: string to be duplicated.
