@@ -29,13 +29,14 @@ if (n >= len_s2)
 	n = len_s2;
 
 total_length = len_s1 + n;
+
 concatenated = malloc(total_length + 1);
 
 if (concatenated == NULL)
 	return (NULL);
 
 for (i = 0; i < len_s1; i++)
-	concatenated[i] = s1[i;
+	concatenated[i] = s1[i];
 for (; i < total_length; i++)
 	concatenated[i] = s2[i - len_s1];
 concatenated[total_length] = '\0';
