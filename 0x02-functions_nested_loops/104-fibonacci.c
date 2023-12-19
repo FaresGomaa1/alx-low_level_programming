@@ -1,6 +1,6 @@
 #include "main.h"
 #include <unistd.h>
-
+i
 /**
 * print_number - prints a number
 * @n: The number to be printed
