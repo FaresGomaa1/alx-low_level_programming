@@ -1,6 +1,6 @@
 #include "main.h"
 #include <unistd.h>
-i
+
 /**
 * print_number - prints a number
 * @n: The number to be printed
@@ -14,24 +14,20 @@ _putchar((n % 10) + '0');
 }
 
 /**
-* main - prints the first 98 Fibonacci numbers
-*
-* Return: 0 on success
+* print_fibonacci - prints the first 98 Fibonacci numbers
 */
-int main(void)
+void print_fibonacci(void)
 {
 unsigned long a = 1, b = 2, temp;
 int count;
 
-for (count = 1; count <= 98; ++count)
-{
 print_number(a);
 
-if (count < 98)
+for (count = 2; count <= 98; ++count)
 {
 _putchar(',');
 _putchar(' ');
-}
+print_number(a);
 
 temp = a + b;
 a = b;
@@ -39,6 +35,15 @@ b = temp;
 }
 
 _putchar('\n');
+}
 
+/**
+* main - Entry point
+*
+* Return: 0 on success
+*/
+int main(void)
+{
+print_fibonacci();
 return (0);
 }
