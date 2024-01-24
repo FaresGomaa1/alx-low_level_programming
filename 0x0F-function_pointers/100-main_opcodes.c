@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <function_pointers.h>
 /**
 * print_opcodes - Prints the opcodes of the main function
 * @n: Number of bytes to print
