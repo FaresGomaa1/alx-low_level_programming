@@ -3,6 +3,14 @@
 #include "lists.h"
 
 /**
+* _strlen - Returns the length of a string.
+* @s: String to calculate the length of.
+*
+* Return: Length of the string.
+*/
+int _strlen(const char *s);
+
+/**
 * add_node - Adds a new node at the beginning of a list_t list.
 * @head: Pointer to a pointer to the head of the list.
 * @str: String to be duplicated and added to the new node.
