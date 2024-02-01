@@ -16,14 +16,9 @@ unsigned int len;
 struct list_s *next;
 } list_t;
 
-/* Task 0 - Print elements of a linked list */
 size_t print_list(const list_t *h);
-
-/* Task 1 - Return the number of elements in a linked list */
 size_t list_len(const list_t *h);
-
-/* Task 2 - Add a new node at the beginning of a list */
 list_t *add_node(list_t **head, const char *str);
-
 list_t *add_node_end(list_t **head, const char *str);
+int _strlen(const char *s);
 #endif /* LISTS_H */
