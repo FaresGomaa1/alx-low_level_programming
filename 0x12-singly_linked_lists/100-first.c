@@ -7,6 +7,8 @@ void before_main(void) __attribute__((constructor));
 */
 void before_main(void)
 {
-printf("You're beat! and yet, you must allow,\n
-		I bore my house upon my back!\n");
+const char *line1 = "You're beat! and yet, you must allow,\n";
+const char *line2 = "I bore my house upon my back!\n";
+
+printf("%s%s", line1, line2);
 }
