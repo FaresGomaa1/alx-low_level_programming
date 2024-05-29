@@ -12,7 +12,8 @@ void print_elf_header(Elf64_Ehdr *hdr)
 {
 printf("ELF Header:\n");
 printf("  Magic:   ");
-for (int i = 0; i < EI_NIDENT; i++)
+int i;
+for (i = 0; i < EI_NIDENT; i++)
 printf("%02x%c", hdr->e_ident[i], i == EI_NIDENT - 1 ? '\n' : ' ');
 printf("  Class:                             ");
 switch (hdr->e_ident[EI_CLASS])
