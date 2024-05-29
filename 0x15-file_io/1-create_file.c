@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "main.h"
-
+#include <string.h>
 /**
 * create_file - Creates a file with given content.
 * @filename: The name of the file to create.
